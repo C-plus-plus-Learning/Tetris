@@ -3,4 +3,4 @@ project(Tetris)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Tetris main.cpp Windows.cpp Mechanism.cpp Schedule.cpp Control.cpp)
+add_executable(Tetris main.cpp Mechanism.cpp Mechanism.h Base.h Windows.h Windows.cpp Schedule.h Schedule.cpp)
