@@ -21,4 +21,4 @@ private:
 };
 
 
-#endif //TETRIS_MECHANISM_H
+#endif

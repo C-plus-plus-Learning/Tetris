@@ -4,7 +4,7 @@ Mechanism::Mechanism(Windows windows) {
     this->windows = windows;
 }
 
-// æ¶ˆé™¤æ–¹å—
+// Ïû³ı·½¿é
 void Mechanism::clearBlock(HANDLE hOut, int block[4][4], int x, int y) {
     for (int i = 0; i < 4; ++i) {
         if (i + x >= 0) {
@@ -160,7 +160,7 @@ void Mechanism::roundBlock(HANDLE hOut, int block[4][4]) {
     windows.printBlock(hOut, block, 5, 15);
 }
 
-// æ£€æµ‹ç¢°æ’
+// ¼ì²âÅö×²
 bool Mechanism::collisionDetection(int block[4][4], int map[21][12], int x, int y) {
     for (int i = 0; i < 4; ++i) {
         for (int j = 0; j < 4; ++j) {
@@ -172,7 +172,7 @@ bool Mechanism::collisionDetection(int block[4][4], int map[21][12], int x, int 
     return true;
 }
 
-// åˆ¤æ–­æ˜¯å¦èƒ½æ¶ˆè¡Œå¹¶æ›´æ–°åˆ†å€¼
+// ÅĞ¶ÏÊÇ·ñÄÜÏûĞĞ²¢¸üĞÂ·ÖÖµ
 void Mechanism::eliminateRow(HANDLE hOut, int map[21][12], int &val, int &fraction, int &checkpoint) {
     SetConsoleTextAttribute(hOut, FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_INTENSITY);
     for (int i = 19; i >= 0; --i) {
@@ -191,7 +191,7 @@ void Mechanism::eliminateRow(HANDLE hOut, int map[21][12], int &val, int &fracti
                     map[m][n] = map[m - 1][n];
                     windows.gotoXY(hOut, 2 * n, m);
                     if (map[m][n] == 1) {
-                        cout << "â– ";
+                        cout << "¡ö";
                     } else {
                         cout << "  ";
                     }

@@ -1,12 +1,13 @@
-//"ä¿„ç½—æ–¯æ–¹å—"V1.0
+//"¶íÂŞË¹·½¿é"V1.0
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
 #include <windows.h>
 #include <conio.h>
-#include "Schedule.h"
-#include "Control.h"
 #include "Windows.h"
+#include "Control.h"
+#include "Schedule.h"
+#include "Base.h"
 
 using namespace std;
 
@@ -16,7 +17,7 @@ int main() {
     Schedule schedule(windows, mechanism);
     Control control(windows, mechanism);
 
-    HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);//è·å–æ ‡å‡†è¾“å‡ºè®¾å¤‡å¥æŸ„
+    HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);//»ñÈ¡±ê×¼Êä³öÉè±¸¾ä±ú
     windows.initialWindow(hOut);
     initial:
     windows.gotoXY(hOut, 0, 0);

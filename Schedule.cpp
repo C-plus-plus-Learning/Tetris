@@ -10,15 +10,15 @@
         this->mechanism = mechanism;
     }
 
-    // æ¸¸æˆç»“æŸ
+    // ÓÎÏ·½áÊø
     void Schedule::gameOver(HANDLE hOut, int block[4][4], int map[21][12]) {
         SetConsoleTextAttribute(hOut, FOREGROUND_RED | FOREGROUND_INTENSITY);
         windows.gotoXY(hOut, 9, 8);
         cout << "GAME OVER";
         windows.gotoXY(hOut, 8, 9);
-        cout << "ç©ºæ ¼é”®ï¼šé‡æ¥";
+        cout << "¿Õ¸ñ¼ü£ºÖØÀ´";
         windows.gotoXY(hOut, 8, 10);
-        cout << "ESCé”®ï¼šé€€å‡º";
+        cout << "ESC¼ü£ºÍË³ö";
         char key;
         while (true) {
             key = _getch();
@@ -31,12 +31,12 @@
         }
     }
 
-    // æ¸¸æˆæš‚åœ
+    // ÓÎÏ·ÔİÍ£
     void Schedule::myStop(HANDLE hOut, int block[4][4]) {
         mechanism.clearBlock(hOut, block, 5, 15);
         SetConsoleTextAttribute(hOut, FOREGROUND_RED | FOREGROUND_INTENSITY);
         windows.gotoXY(hOut, 30, 7);
-        cout << "æ¸¸æˆæš‚åœ";
+        cout << "ÓÎÏ·ÔİÍ£";
         char key;
         while (true) {
             key = _getch();

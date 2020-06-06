@@ -1,9 +1,9 @@
 #ifndef TETRIS_WINDOWS_H
 #define TETRIS_WINDOWS_H
 
-#include "Windows.h"
 #include <iostream>
 #include <windows.h>
+#include "Windows.h"
 
 using namespace std;
 

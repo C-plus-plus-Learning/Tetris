@@ -5,7 +5,7 @@ Control::Control(Windows windows, Mechanism mechanism) : mechanism(windows) {
     this->windows = windows;
 }
 
-// Âä†ÈÄü‰∏ãËêΩ
+// º”ÀŸœ¬¬‰
 int Control::myDown(HANDLE hOut, int block[4][4], int map[21][12], int &x, int y) {
     if (mechanism.collisionDetection(block, map, x + 1, y)) {
         mechanism.clearBlock(hOut, block, x, y);
@@ -22,14 +22,14 @@ int Control::myDown(HANDLE hOut, int block[4][4], int map[21][12], int &x, int y
                 SetConsoleTextAttribute(hOut,
                                         FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_INTENSITY);
                 windows.gotoXY(hOut, 2 * (y + j), x + i);
-                cout << "‚ñ†";
+                cout << "°ˆ";
             }
         }
     }
     return 1;
 }
 
-//Â∑¶Áßª
+//◊Û“∆
 void Control::myLeft(HANDLE hOut, int block[4][4], int map[21][12], int x, int &y) {
     if (mechanism.collisionDetection(block, map, x, y - 1)) {
         mechanism.clearBlock(hOut, block, x, y);
@@ -37,7 +37,7 @@ void Control::myLeft(HANDLE hOut, int block[4][4], int map[21][12], int x, int &
     }
 }
 
-// Âè≥Áßª
+// ”““∆
 void Control::myRight(HANDLE hOut, int block[4][4], int map[21][12], int x, int &y) {
     if (mechanism.collisionDetection(block, map, x, y + 1)) {
         mechanism.clearBlock(hOut, block, x, y);
@@ -45,7 +45,7 @@ void Control::myRight(HANDLE hOut, int block[4][4], int map[21][12], int x, int 
     }
 }
 
-// È°∫Êó∂ÈíàÊóãËΩ¨90Â∫¶
+// À≥ ±’Î–˝◊™90∂»
 void Control::myUp(HANDLE hOut, int block[4][4], int map[21][12], int x, int &y) {
     switch (block[0][0]) {
         case 10:

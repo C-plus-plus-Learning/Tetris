@@ -1,89 +1,30 @@
+extern int block00[4][4];
+extern int block01[4][4];
+extern int block02[4][4];
+extern int block03[4][4];
+extern int block04[4][4];
+extern int block05[4][4];
+extern int block06[4][4];
+extern int block07[4][4];
+extern int block08[4][4];
+extern int block09[4][4];
+extern int block10[4][4];
+extern int block11[4][4];
+extern int block12[4][4];
+extern int block13[4][4];
+extern int block14[4][4];
+extern int block15[4][4];
+extern int block16[4][4];
+extern int block17[4][4];
+extern int block18[4][4];
 
-
-int block00[4][4] = {{10, 0, 0, 0},
-                     {1,  1, 1, 1},
-                     {0,  0, 0, 0},
-                     {0,  0, 0, 0}};
-int block01[4][4] = {{11, 0, 1, 0},
-                     {0,  0, 1, 0},
-                     {0,  0, 1, 0},
-                     {0,  0, 1, 0}};
-int block02[4][4] = {{12, 0, 0, 0},
-                     {0,  0, 0, 0},
-                     {1,  1, 1, 0},
-                     {0,  1, 0, 0}};
-int block03[4][4] = {{13, 0, 0, 0},
-                     {0,  1, 0, 0},
-                     {1,  1, 0, 0},
-                     {0,  1, 0, 0}};
-int block04[4][4] = {{14, 0, 0, 0},
-                     {0,  0, 0, 0},
-                     {0,  1, 0, 0},
-                     {1,  1, 1, 0}};
-int block05[4][4] = {{15, 0, 0, 0},
-                     {0,  1, 0, 0},
-                     {0,  1, 1, 0},
-                     {0,  1, 0, 0}};
-int block06[4][4] = {{16, 0, 0, 0},
-                     {0,  0, 0, 0},
-                     {1,  1, 1, 0},
-                     {1,  0, 0, 0}};
-int block07[4][4] = {{17, 0, 0, 0},
-                     {1,  1, 0, 0},
-                     {0,  1, 0, 0},
-                     {0,  1, 0, 0}};
-int block08[4][4] = {{18, 0, 0, 0},
-                     {0,  0, 0, 0},
-                     {0,  0, 1, 0},
-                     {1,  1, 1, 0}};
-int block09[4][4] = {{19, 0, 0, 0},
-                     {0,  1, 0, 0},
-                     {0,  1, 0, 0},
-                     {0,  1, 1, 0}};
-int block10[4][4] = {{20, 0, 0, 0},
-                     {0,  0, 0, 0},
-                     {1,  1, 1, 0},
-                     {0,  0, 1, 0}};
-int block11[4][4] = {{21, 0, 0, 0},
-                     {0,  1, 0, 0},
-                     {0,  1, 0, 0},
-                     {1,  1, 0, 0}};
-int block12[4][4] = {{22, 0, 0, 0},
-                     {0,  0, 0, 0},
-                     {1,  0, 0, 0},
-                     {1,  1, 1, 0}};
-int block13[4][4] = {{23, 0, 0, 0},
-                     {0,  1, 1, 0},
-                     {0,  1, 0, 0},
-                     {0,  1, 0, 0}};
-int block14[4][4] = {{24, 0, 0, 0},
-                     {0,  0, 0, 0},
-                     {0,  1, 1, 0},
-                     {1,  1, 0, 0}};
-int block15[4][4] = {{25, 0, 0, 0},
-                     {1,  0, 0, 0},
-                     {1,  1, 0, 0},
-                     {0,  1, 0, 0}};
-int block16[4][4] = {{26, 0, 0, 0},
-                     {0,  0, 0, 0},
-                     {1,  1, 0, 0},
-                     {0,  1, 1, 0}};
-int block17[4][4] = {{27, 0, 0, 0},
-                     {0,  0, 1, 0},
-                     {0,  1, 1, 0},
-                     {0,  1, 0, 0}};
-int block18[4][4] = {{28, 0, 0, 0},
-                     {0,  0, 0, 0},
-                     {1,  1, 0, 0},
-                     {1,  1, 0, 0}};
-
-int map[21][12];
-int blockA[4][4];//候选区的方块
-int blockB[4][4];//下落中的方块
-int positionX, positionY;//方块左上角的坐标
-bool check;//检查方块还能不能下落
-char key;//用来存储按键
-int val;//用来控制下落速度
-int fraction;//用来存储得分
-int checkpoint;//用来存储关卡
-int times;
+extern int map[21][12];
+extern int blockA[4][4];//候选区的方块
+extern int blockB[4][4];//下落中的方块
+extern int positionX, positionY;//方块左上角的坐标
+extern bool check;//检查方块还能不能下落
+extern char key;//用来存储按键
+extern int val;//用来控制下落速度
+extern int fraction;//用来存储得分
+extern int checkpoint;//用来存储关卡
+extern int times;

@@ -1,7 +1,7 @@
 #include "Windows.h"
 
 
-// ÁßªÂä®ÂÖâÊ†á
+// “∆∂Øπ‚±Í
 void Windows::gotoXY(HANDLE hOut, int x, int y) {
     COORD pos;
     pos.X = x;
@@ -9,7 +9,7 @@ void Windows::gotoXY(HANDLE hOut, int x, int y) {
     SetConsoleCursorPosition(hOut, pos);
 }
 
-// ÊâìÂç∞ÊñπÂùó
+// ¥Ú”°∑ΩøÈ
 void Windows::printBlock(HANDLE hOut, int block[4][4], int x, int y) {
 
     switch (block[0][0]) {
@@ -55,16 +55,16 @@ void Windows::printBlock(HANDLE hOut, int block[4][4], int x, int y) {
                 if (block[i][j] == 1) {
 
                     gotoXY(hOut, 2 * (y + j), x + i);
-                    cout << "‚ñ†";
+                    cout << "°ˆ";
                 }
             }
         }
     }
 }
 
-// ÂàùÂßãÂåñÁ™óÂè£
+// ≥ı ºªØ¥∞ø⁄
 void Windows::initialWindow(HANDLE hOut) {
-    SetConsoleTitle("‰øÑÁΩóÊñØÊñπÂùó");
+    SetConsoleTitle("∂Ì¬ﬁÀπ∑ΩøÈ");
     COORD size = {80, 25};
     SetConsoleScreenBufferSize(hOut, size);
     SMALL_RECT rc = {0, 0, 79, 24};
@@ -73,36 +73,35 @@ void Windows::initialWindow(HANDLE hOut) {
     SetConsoleCursorInfo(hOut, &cursor_info);
 }
 
-// ÂàùÂßãÂåñÁïåÈù¢
+// ≥ı ºªØΩÁ√Ê
 void Windows::initialPrint(HANDLE hOut) {
     SetConsoleTextAttribute(hOut, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
     for (int i = 0; i < 20; ++i) {
-        cout << "‚ñ†                    ‚ñ†‚òÜ                      ‚òÜ" << endl;
+        cout << "°ˆ                    °ˆ°Ó                      °Ó" << endl;
     }
     gotoXY(hOut, 26, 0);
-    cout << "‚òÜ‚òÜ‚òÜ‚òÜ‚òÜ‚òÜ‚òÜ‚òÜ‚òÜ‚òÜ‚òÜ";
+    cout << "°Ó°Ó°Ó°Ó°Ó°Ó°Ó°Ó°Ó°Ó°Ó";
     gotoXY(hOut, 0, 20);
-    cout << "‚ñ†‚ñ†‚ñ†‚ñ†‚ñ†‚ñ†‚ñ†‚ñ†‚ñ†‚ñ†‚ñ†‚ñ†‚òÜ‚òÜ‚òÜ‚òÜ‚òÜ‚òÜ‚òÜ‚òÜ‚òÜ‚òÜ‚òÜ‚òÜ‚òÜ";
+    cout << "°ˆ°ˆ°ˆ°ˆ°ˆ°ˆ°ˆ°ˆ°ˆ°ˆ°ˆ°ˆ°Ó°Ó°Ó°Ó°Ó°Ó°Ó°Ó°Ó°Ó°Ó°Ó°Ó";
     gotoXY(hOut, 26, 1);
-    cout << "ÂàÜ    Êï∞Ôºö      ";
+    cout << "∑÷     ˝£∫      ";
     gotoXY(hOut, 26, 2);
-    cout << "ÂÖ≥    Âç°Ôºö      ";
+    cout << "πÿ    ø®£∫      ";
     gotoXY(hOut, 26, 4);
-    cout << "‰∏ã‰∏ÄÊñπÂùóÔºö";
+    cout << "œ¬“ª∑ΩøÈ£∫";
     gotoXY(hOut, 26, 9);
-    cout << "Êìç‰ΩúÊñπÊ≥ïÔºö";
+    cout << "≤Ÿ◊˜∑Ω∑®£∫";
     gotoXY(hOut, 30, 11);
-    cout << "‚ÜëÔºöÊóãËΩ¨ ‚ÜìÔºöÈÄüÈôç";
+    cout << "°¸£∫–˝◊™ °˝£∫ÀŸΩµ";
     gotoXY(hOut, 30, 12);
-    cout << "‚ÜíÔºöÂè≥Áßª ‚ÜêÔºöÂ∑¶Áßª";
+    cout << "°˙£∫”““∆ °˚£∫◊Û“∆";
     gotoXY(hOut, 30, 13);
-    cout << "Á©∫Ê†ºÈîÆÔºöÂºÄÂßã/ÊöÇÂÅú";
+    cout << "ø’∏Òº¸£∫ø™ º/‘›Õ£";
     gotoXY(hOut, 30, 14);
-    cout << "Esc ÈîÆÔºöÈÄÄÂá∫";
+    cout << "Esc º¸£∫ÕÀ≥ˆ";
     gotoXY(hOut, 26, 16);
-    cout << "ÂÖ≥    ‰∫éÔºö";
+    cout << "πÿ    ”⁄£∫";
     gotoXY(hOut, 30, 18);
-    cout << "‰øÑÁΩóÊñØÊñπÂùóV1.0";
+    cout << "∂Ì¬ﬁÀπ∑ΩøÈV1.0";
     gotoXY(hOut, 35, 19);
-    cout << "‰ΩúËÄÖÔºöÊùéÂõΩËâØ";
 }

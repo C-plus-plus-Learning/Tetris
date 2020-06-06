@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include <windows.h>
 #include <conio.h>
-#include "Mechanism.cpp"
+#include "Mechanism.h"
 
 using namespace std;
 
