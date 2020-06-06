@@ -1,5 +1,4 @@
 //"俄罗斯方块"V1.0
-//李国良于2017年1月20日编写完成
 #include <iostream>
 #include <string>
 #include <ctime>
