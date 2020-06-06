@@ -10,9 +10,6 @@
 
 using namespace std;
 
-void gotoXY(HANDLE hOut, int x, int y);//移动光标
-void printBlock(HANDLE hOut, int block[4][4], int x, int y);//打印方块
-void myStop(HANDLE hOut, int block[4][4]);//游戏暂停
 int main() {
     Windows windows;
     Mechanism mechanism(windows);
@@ -61,7 +58,7 @@ int main() {
                 goto initial;
             }
         }
-        printBlock(hOut, blockB, positionX, positionY);
+        windows.printBlock(hOut, blockB, positionX, positionY);
         if (_kbhit()) {
             key = _getch();
             switch (key) {
@@ -90,7 +87,7 @@ int main() {
                     }
                     break;
                 case 32:
-                    myStop(hOut, blockA);
+                    schedule.myStop(hOut, blockA);
                     break;
                 case 27:
                     exit(0);
