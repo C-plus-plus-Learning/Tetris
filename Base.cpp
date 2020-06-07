@@ -79,12 +79,20 @@ int block18[4][4] = {{28, 0, 0, 0},
                      {1,  1, 0, 0}};
 
 int map[21][12];
-int blockA[4][4];//候选区的方块
-int blockB[4][4];//下落中的方块
-int positionX, positionY;//方块左上角的坐标
-bool check;//检查方块还能不能下落
-char key;//用来存储按键
-int speed;//用来控制下落速度
-int score;//用来存储得分
-int checkpoint;//用来存储关卡
+// 候选区的方块
+int blockA[4][4];
+// 下落中的方块
+int blockB[4][4];
+// 方块左上角的坐标
+int positionX, positionY;
+// 检查方块还能不能下落
+bool check;
+// 用来存储按键
+char key;
+// 用来控制下落速度
+int speed;
+// 用来存储得分
+int score;
+// 用来存储关卡
+int checkpoint;
 int times;
