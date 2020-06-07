@@ -1,16 +1,16 @@
 #include "Mechanism.h"
 
-Mechanism::Mechanism(Windows windows) {
+Mechanism::Mechanism(Windows *windows) {
     this->windows = windows;
 }
 
 // 消除方块
-void Mechanism::clearBlock(HANDLE hOut, int block[4][4], int x, int y) {
+ void Mechanism::clearBlock(HANDLE hOut, int block[4][4], int x, int y) {
     for (int i = 0; i < 4; ++i) {
         if (i + x >= 0) {
             for (int j = 0; j < 4; ++j) {
                 if (block[i][j] == 1) {
-                    windows.gotoXY(hOut, 2 * (y + j), x + i);
+                    windows->gotoXY(hOut, 2 * (y + j), x + i);
                     cout << "  ";
                 }
             }
@@ -90,7 +90,7 @@ void Mechanism::roundBlock(HANDLE hOut, int block[4][4]) {
         default:
             break;
     }
-    windows.printBlock(hOut, block, 5, 15);
+    windows->printBlock(hOut, block, 5, 15);
 }
 
 // 检测碰撞
@@ -106,7 +106,7 @@ bool Mechanism::collisionDetection(int block[4][4], int map[21][12], int x, int 
 }
 
 // 判断是否能消行并更新分值
-void Mechanism::eliminateRow(HANDLE hOut, int map[21][12], int &val, int &fraction, int &checkpoint) {
+void Mechanism::eliminateRow(HANDLE hOut, int map[21][12], int &speed, int &score, int &checkpoint) {
     SetConsoleTextAttribute(hOut, FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_INTENSITY);
     for (int i = 19; i >= 0; --i) {
         int x = 0;
@@ -114,15 +114,15 @@ void Mechanism::eliminateRow(HANDLE hOut, int map[21][12], int &val, int &fracti
             x += map[i][j];
         }
         if (x == 10) {
-            fraction += 100;
-            if (val > 1 && fraction / 1000 + 1 != checkpoint) {
-                checkpoint = fraction / 1000 + 1;
-                val -= 5;
+            score += 100;
+            if (speed > 1 && score / 1000 + 1 != checkpoint) {
+                checkpoint = score / 1000 + 1;
+                speed -= 5;
             }
             for (int m = i; m > 0; --m) {
                 for (int n = 1; n < 11; ++n) {
                     map[m][n] = map[m - 1][n];
-                    windows.gotoXY(hOut, 2 * n, m);
+                    windows->gotoXY(hOut, 2 * n, m);
                     if (map[m][n] == 1) {
                         cout << "■";
                     } else {
@@ -133,9 +133,9 @@ void Mechanism::eliminateRow(HANDLE hOut, int map[21][12], int &val, int &fracti
             ++i;
         }
     }
-    windows.gotoXY(hOut, 36, 1);
-    cout << fraction;
-    windows.gotoXY(hOut, 36, 2);
+    windows->gotoXY(hOut, 36, 1);
+    cout << score;
+    windows->gotoXY(hOut, 36, 2);
     cout << checkpoint;
 }
 

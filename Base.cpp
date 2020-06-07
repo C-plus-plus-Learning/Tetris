@@ -1,5 +1,6 @@
 #include "Base.h"
 
+// 候选区候选方块(总计19种)
 int block00[4][4] = {{10, 0, 0, 0},
                      {1,  1, 1, 1},
                      {0,  0, 0, 0},
@@ -83,7 +84,7 @@ int blockB[4][4];//下落中的方块
 int positionX, positionY;//方块左上角的坐标
 bool check;//检查方块还能不能下落
 char key;//用来存储按键
-int val;//用来控制下落速度
-int fraction;//用来存储得分
+int speed;//用来控制下落速度
+int score;//用来存储得分
 int checkpoint;//用来存储关卡
 int times;

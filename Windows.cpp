@@ -65,10 +65,13 @@ void Windows::printBlock(HANDLE hOut, int block[4][4], int x, int y) {
 // 初始化窗口
 void Windows::initialWindow(HANDLE hOut) {
     SetConsoleTitle("俄罗斯方块");
-    COORD size = {80, 25};
+    // 设置屏幕缓冲区大小
+    COORD size = {10, 25};
     SetConsoleScreenBufferSize(hOut, size);
+    // 设置窗口大小
     SMALL_RECT rc = {0, 0, 79, 24};
     SetConsoleWindowInfo(hOut, true, &rc);
+    // 设置光标大小
     CONSOLE_CURSOR_INFO cursor_info = {1, 0};
     SetConsoleCursorInfo(hOut, &cursor_info);
 }
@@ -102,6 +105,6 @@ void Windows::initialPrint(HANDLE hOut) {
     gotoXY(hOut, 26, 16);
     cout << "关    于：";
     gotoXY(hOut, 30, 18);
-    cout << "俄罗斯方块V1.0";
+    cout << "俄罗斯方块";
     gotoXY(hOut, 35, 19);
 }

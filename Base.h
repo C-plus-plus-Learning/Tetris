@@ -19,12 +19,20 @@ extern int block17[4][4];
 extern int block18[4][4];
 
 extern int map[21][12];
-extern int blockA[4][4];//候选区的方块
-extern int blockB[4][4];//下落中的方块
-extern int positionX, positionY;//方块左上角的坐标
-extern bool check;//检查方块还能不能下落
-extern char key;//用来存储按键
-extern int val;//用来控制下落速度
-extern int fraction;//用来存储得分
-extern int checkpoint;//用来存储关卡
+// 候选区的方块
+extern int blockA[4][4];
+// 下落中的方块
+extern int blockB[4][4];
+// 方块左上角的坐标
+extern int positionX, positionY;
+// 检查方块还能不能下落
+extern bool check;
+// 用来存储按键
+extern char key;
+// 用来控制下落速度
+extern int speed;
+// 用来存储得分
+extern int score;
+// 用来存储关卡
+extern int checkpoint;
 extern int times;

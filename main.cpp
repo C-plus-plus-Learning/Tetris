@@ -1,4 +1,3 @@
-//"俄罗斯方块"V1.0
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
@@ -12,21 +11,23 @@
 using namespace std;
 
 int main() {
+    // 初始化
     Windows windows;
-    Mechanism mechanism(windows);
-    Schedule schedule(windows, mechanism);
-    Control control(windows, mechanism);
+    Mechanism mechanism(&windows);
+    Schedule schedule(&windows, &mechanism);
+    Control control(&windows, &mechanism);
 
-    HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);//获取标准输出设备句柄
+    // 获取标准输出设备句柄
+    HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
     windows.initialWindow(hOut);
     initial:
     windows.gotoXY(hOut, 0, 0);
     windows.initialPrint(hOut);
     check = true;
-    val = 50;
-    fraction = 0;
+    speed = 50;
+    score = 0;
     checkpoint = 1;
-    times = val;
+    times = speed;
     for (int i = 0; i < 20; ++i) {
         for (int j = 1; j < 11; ++j) {
             map[i][j] = 0;
@@ -39,11 +40,12 @@ int main() {
         map[20][i] = 1;
     }
 
+    // 设置随机数种子
     srand((unsigned) time(NULL));
     mechanism.roundBlock(hOut, blockA);
     while (true) {
         if (check) {
-            mechanism.eliminateRow(hOut, map, val, fraction, checkpoint);
+            mechanism.eliminateRow(hOut, map, speed, score, checkpoint);
             check = false;
             positionX = -3;
             positionY = 4;
@@ -111,11 +113,9 @@ int main() {
                 default:
                     break;
             }
-            times = val;
+            times = speed;
         }
     }
-    cin.get();
-    return 0;
 }
 
 
