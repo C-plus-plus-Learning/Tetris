@@ -1,4 +1,3 @@
-#include <iostream>
 #include <ctime>
 #include <cstdlib>
 #include <windows.h>

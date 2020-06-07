@@ -104,7 +104,10 @@ void Windows::initialPrint(HANDLE hOut) {
     cout << "Esc 键：退出";
     gotoXY(hOut, 26, 16);
     cout << "关    于：";
-    gotoXY(hOut, 30, 18);
+    gotoXY(hOut, 30, 17);
     cout << "俄罗斯方块";
-    gotoXY(hOut, 35, 19);
-}
+    gotoXY(hOut, 32, 18);
+    cout<<"LICENSE ";
+    gotoXY(hOut, 27, 19);
+    cout<< "Apache License 2.0";
+};
