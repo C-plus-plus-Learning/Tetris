@@ -18,141 +18,74 @@ void Mechanism::clearBlock(HANDLE hOut, int block[4][4], int x, int y) {
     }
 }
 
+void change(int block[4][4], int replace[4][4]) {
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            block[i][j] = replace[i][j];
+        }
+    }
+}
+
+// 随机生成方块并打印到下一个方块位置
 void Mechanism::roundBlock(HANDLE hOut, int block[4][4]) {
     clearBlock(hOut, block, 5, 15);
     switch (rand() % 19) {
         case 0:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block00[i][j];
-                }
-            }
+            change(block, block00);
             break;
         case 1:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block01[i][j];
-                }
-            }
+            change(block, block01);
             break;
         case 2:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block02[i][j];
-                }
-            }
+            change(block, block02);
             break;
         case 3:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block03[i][j];
-                }
-            }
+            change(block, block03);
             break;
         case 4:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block04[i][j];
-                }
-            }
+            change(block, block04);
             break;
         case 5:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block05[i][j];
-                }
-            }
+            change(block, block05);
             break;
         case 6:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block06[i][j];
-                }
-            }
+            change(block, block06);
             break;
         case 7:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block07[i][j];
-                }
-            }
+            change(block, block07);
             break;
         case 8:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block08[i][j];
-                }
-            }
+            change(block, block08);
             break;
         case 9:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block09[i][j];
-                }
-            }
+            change(block, block09);
             break;
         case 10:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block10[i][j];
-                }
-            }
+            change(block, block10);
             break;
         case 11:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block11[i][j];
-                }
-            }
+            change(block, block11);
             break;
         case 12:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block12[i][j];
-                }
-            }
+            change(block, block12);
             break;
         case 13:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block13[i][j];
-                }
-            }
+            change(block, block13);
             break;
         case 14:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block14[i][j];
-                }
-            }
+            change(block, block14);
             break;
         case 15:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block15[i][j];
-                }
-            }
+            change(block, block15);
             break;
         case 16:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block16[i][j];
-                }
-            }
+            change(block, block16);
             break;
         case 17:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block17[i][j];
-                }
-            }
+            change(block, block17);
             break;
         case 18:
-            for (int i = 0; i < 4; ++i) {
-                for (int j = 0; j < 4; ++j) {
-                    block[i][j] = block18[i][j];
-                }
-            }
+            change(block, block18);
             break;
         default:
             break;
