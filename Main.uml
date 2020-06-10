@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Main</OriginalElement>
+  <nodes>
+    <node x="0.0" y="546.0">Control</node>
+    <node x="413.0" y="560.0">Schedule</node>
+    <node x="219.40625" y="0.0">Windows</node>
+    <node x="296.66666666666686" y="-68.66666666666717">Main</node>
+    <node x="184.625" y="211.0">Mechanism</node>
+    <node x="737.8888888888889" y="-5.555555555555543">Base</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Control" target="Windows">
+      <point x="-49.125" y="-128.5" />
+      <point x="147.375" y="521.0" />
+      <point x="150.5546875" y="521.0" />
+      <point x="150.5546875" y="181.0" />
+      <point x="308.90625" y="181.0" />
+      <point x="-89.5" y="75.5" />
+    </edge>
+    <edge source="Schedule" target="Mechanism">
+      <point x="-131.625" y="-114.5" />
+      <point x="456.875" y="521.0" />
+      <point x="447.75" y="521.0" />
+      <point x="52.625" y="142.5" />
+    </edge>
+    <edge source="Schedule" target="Windows">
+      <point x="131.625" y="-114.5" />
+      <point x="720.125" y="521.0" />
+      <point x="653.9765625" y="521.0" />
+      <point x="653.9765625" y="171.0" />
+      <point x="547.5729166666665" y="171.0" />
+      <point x="149.16666666666652" y="75.5" />
+    </edge>
+    <edge source="Control" target="Mechanism">
+      <point x="49.125" y="-128.5" />
+      <point x="245.625" y="521.0" />
+      <point x="237.25" y="521.0" />
+      <point x="-157.875" y="142.5" />
+    </edge>
+    <edge source="Mechanism" target="Windows">
+      <point x="-105.25" y="-142.5" />
+      <point x="289.875" y="191.0" />
+      <point x="368.57291666666663" y="191.0" />
+      <point x="-29.83333333333337" y="75.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8999999999999995" x="749.8253968253971" y="379.3333333333336" />
+  <SelectedNodes>
+    <node>Main</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
