@@ -109,7 +109,7 @@ void init() {
         List list{};
         for (int j = 0; j < 4; j++) {
             for (int k = 0; k < 4; k++) {
-                infile >> list.lists[i][j];
+                infile >> list.lists[j][k];
                 /*for (int a = 0; a < 4; a++) {
                     for (int b = 0; b < 4; b++) {
                         cout << list.lists[a][b] << " ";

@@ -22,7 +22,6 @@ void change(int block[4][4], List list) {
     for (int i = 0; i < 4; ++i) {
         for (int j = 0; j < 4; ++j) {
             block[i][j] = list.lists[i][j];
-            cout<< block[i][j]<<endl;
         }
     }
 }
