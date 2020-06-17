@@ -5,17 +5,20 @@
 #include "Windows.h"
 #include "Control.h"
 #include "Schedule.h"
-#include "Base.h"
 
 using namespace std;
 
 int main() {
     // 初始化
+    init();
     Windows windows;
     Mechanism mechanism(&windows);
     Schedule schedule(&windows, &mechanism);
     Control control(&windows, &mechanism);
 
+    if (true) {
+        return 0;
+    }
     // 获取标准输出设备句柄
     HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
     windows.initialWindow(hOut);

@@ -5,7 +5,7 @@ Mechanism::Mechanism(Windows *windows) {
 }
 
 // Ïû³ý·½¿é
- void Mechanism::clearBlock(HANDLE hOut, int block[4][4], int x, int y) {
+void Mechanism::clearBlock(HANDLE hOut, int block[4][4], int x, int y) {
     for (int i = 0; i < 4; ++i) {
         if (i + x >= 0) {
             for (int j = 0; j < 4; ++j) {
@@ -18,10 +18,11 @@ Mechanism::Mechanism(Windows *windows) {
     }
 }
 
-void change(int block[4][4], int replace[4][4]) {
+void change(int block[4][4], List list) {
     for (int i = 0; i < 4; ++i) {
         for (int j = 0; j < 4; ++j) {
-            block[i][j] = replace[i][j];
+            block[i][j] = list.lists[i][j];
+            cout<< block[i][j]<<endl;
         }
     }
 }
@@ -31,61 +32,61 @@ void Mechanism::roundBlock(HANDLE hOut, int block[4][4]) {
     clearBlock(hOut, block, 5, 15);
     switch (rand() % 19) {
         case 0:
-            change(block, block00);
+            change(block, shape[0]);
             break;
         case 1:
-            change(block, block01);
+            change(block, shape[1]);
             break;
         case 2:
-            change(block, block02);
+            change(block, shape[2]);
             break;
         case 3:
-            change(block, block03);
+            change(block, shape[3]);
             break;
         case 4:
-            change(block, block04);
+            change(block, shape[4]);
             break;
         case 5:
-            change(block, block05);
+            change(block, shape[5]);
             break;
         case 6:
-            change(block, block06);
+            change(block, shape[6]);
             break;
         case 7:
-            change(block, block07);
+            change(block, shape[7]);
             break;
         case 8:
-            change(block, block08);
+            change(block, shape[8]);
             break;
         case 9:
-            change(block, block09);
+            change(block, shape[9]);
             break;
         case 10:
-            change(block, block10);
+            change(block, shape[10]);
             break;
         case 11:
-            change(block, block11);
+            change(block, shape[11]);
             break;
         case 12:
-            change(block, block12);
+            change(block, shape[12]);
             break;
         case 13:
-            change(block, block13);
+            change(block, shape[13]);
             break;
         case 14:
-            change(block, block14);
+            change(block, shape[14]);
             break;
         case 15:
-            change(block, block15);
+            change(block, shape[15]);
             break;
         case 16:
-            change(block, block16);
+            change(block, shape[16]);
             break;
         case 17:
-            change(block, block17);
+            change(block, shape[17]);
             break;
         case 18:
-            change(block, block18);
+            change(block, shape[18]);
             break;
         default:
             break;

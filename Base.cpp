@@ -96,3 +96,29 @@ int score;
 // 用来存储关卡
 int checkpoint;
 int times;
+vector<List> shape;
+
+void init() {
+    ifstream infile("shape.txt", ios::in);
+    if (!infile) {
+        cerr << "open error!";
+        exit(1);
+    }
+
+    for (int i = 0; i < 19; i++) {
+        List list{};
+        for (int j = 0; j < 4; j++) {
+            for (int k = 0; k < 4; k++) {
+                infile >> list.lists[i][j];
+                /*for (int a = 0; a < 4; a++) {
+                    for (int b = 0; b < 4; b++) {
+                        cout << list.lists[a][b] << " ";
+                    }
+                    cout<<endl;
+                }
+                cout<<endl;*/
+            }
+        }
+        shape.push_back(list);
+    }
+}

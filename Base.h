@@ -1,3 +1,9 @@
+#include <vector>
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
 extern int block00[4][4];
 extern int block01[4][4];
 extern int block02[4][4];
@@ -18,7 +24,13 @@ extern int block16[4][4];
 extern int block17[4][4];
 extern int block18[4][4];
 
+struct List {
+    int lists[4][4];
+};
+
+extern vector<List> shape;
 extern int map[21][12];
+
 // 候选区的方块
 extern int blockA[4][4];
 // 下落中的方块
@@ -36,3 +48,5 @@ extern int score;
 // 用来存储关卡
 extern int checkpoint;
 extern int times;
+
+extern void init();
